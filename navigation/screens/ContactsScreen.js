@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {View, Text} from 'react-native'
 import AddContactButton from '../../components/AddContactButton';
+import MyContactList from '../../components/MyContactList';
 import SearchBar from '../../components/SearchBar';
 
 export default function ContactsScreen({navigation}) {
@@ -8,6 +9,7 @@ export default function ContactsScreen({navigation}) {
           <View>
                <SearchBar/>
                <AddContactButton/>
+               <MyContactList/>
           </View>
           
      );
