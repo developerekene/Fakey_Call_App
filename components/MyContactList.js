@@ -44,7 +44,7 @@ export default function MyContactList() {
                     console.log("LABEL",contact)
                     return(
                       <View key={index} style={{}}>
-                           <Text style={{fontSize: 17, paddingStart: 20, paddingBottom: 20, paddingTop: 20}}>{contact.firstName}</Text>
+                           <Text style={{fontSize: 17, paddingStart: 20, paddingBottom: 20, paddingTop: 20, backgroundColor: 'green'}}>{contact.firstName}</Text>
                       {/* {contact.emails.map((emailContact, i)=> <Text key={i} style={{color: COLORS.colorwhite, paddingTop: 10}}>Email: {emailContact.email}</Text>)} */}
                       {/* {contact.phoneNumbers.map((phoneContact, j)=> <Text key={j} style={{color: COLORS.colorwhite}}>{phoneContact.label}: {phoneContact.number}</Text>)} */}
                       
