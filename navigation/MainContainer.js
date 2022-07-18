@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
@@ -18,12 +17,13 @@ const recentname = 'Recent'
 
 //Creating Tab Navigator
 const Tab = createBottomTabNavigator();
+// const Stack = createNativeStackNavigator();
 
 export default function MainContainer(){
      return(
-          <NavigationContainer>
                <Tab.Navigator
                initialRouteName={contactName}
+               options={{headerShown: false}}
                screenOptions={({route}) => ({
                     tabBarIcon: ({focused, color, size}) => {
                          let iconName;
@@ -45,11 +45,10 @@ export default function MainContainer(){
                     inactiveTintColor: COLORS.lightGrey
                }}
                >
-                    <Tab.Screen name={recentname} component={RecentScreen}/>
-                    <Tab.Screen name={contactName} component={ContactsScreen}/>
+                    <Tab.Screen name={recentname} component={RecentScreen} />
+                    <Tab.Screen name={contactName} component={ContactsScreen} />
                     <Tab.Screen name={favouriteName} component={FavouriteScreen}/>
 
                </Tab.Navigator>
-          </NavigationContainer>
      );
 }

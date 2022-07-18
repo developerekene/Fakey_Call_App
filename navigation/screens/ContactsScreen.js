@@ -6,9 +6,10 @@ import SearchBar from '../../components/SearchBar';
 
 export default function ContactsScreen({navigation}) {
      return(
+
           <View>
                <SearchBar/>
-               <AddContactButton/>
+               <AddContactButton navigation={navigation}/>
                <MyContactList/>
           </View>
           

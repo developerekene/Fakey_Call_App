@@ -3,7 +3,7 @@ import { ScrollView, View, TouchableOpacity, Text } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { COLORS } from '../constants/Colors';
 
-export default function CallScreenIcons(){
+export default function CallScreenIcons({navigation}){
      return(
           <View style={{
                justifyContent: 'center',
