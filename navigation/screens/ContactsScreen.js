@@ -10,7 +10,7 @@ export default function ContactsScreen({navigation}) {
           <View>
                <SearchBar/>
                <AddContactButton navigation={navigation}/>
-               <MyContactList/>
+               <MyContactList navigation={navigation}/>
           </View>
           
      );

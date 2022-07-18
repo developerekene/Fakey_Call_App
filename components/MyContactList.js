@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 import { useEffect, useState } from 'react';
 import { COLORS } from '../constants/Colors';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native';
 
 
 export default function MyContactList({ navigation }) {
@@ -41,11 +41,12 @@ export default function MyContactList({ navigation }) {
           if(contacts.length > 0){
                // console.log("LABEL", contacts)
                return contacts.map((contact, index) => {
-                    console.log("LABEL",contact)
+                    console.log("LABEL", contact)
                     return(
                       <View key={index}>
-                           
-                           <Text onPress={() => navigation.navigate(ContactsScreen)}
+
+                           <TouchableOpacity onPress={() => navigation.navigate("DetailsScreen")}>
+                           <Text 
                            style={{
                                 fontSize: 17, 
                                 paddingStart: 20, 
@@ -53,6 +54,9 @@ export default function MyContactList({ navigation }) {
                                 paddingTop: 20, 
                                 color: COLORS.lightRed}}>
                                      {contact.firstName}</Text>
+                           </TouchableOpacity>
+                           
+                           
                       {/* {contact.emails.map((emailContact, i)=> <Text key={i} style={{color: COLORS.colorwhite, paddingTop: 10}}>Email: {emailContact.email}</Text>)} */}
                       {/* {contact.phoneNumbers.map((phoneContact, j)=> <Text key={j} style={{color: COLORS.colorwhite}}>{phoneContact.label}: {phoneContact.number}</Text>)} */}
                       
@@ -71,9 +75,7 @@ export default function MyContactList({ navigation }) {
           <View style={{
                          
                     }}>
-                  <TouchableOpacity >
                     {error? <Text>{error}</Text>: getContactsRow()}
-                  </TouchableOpacity>
                     
                {/* <ScrollView horizontal >
                     <Ionicons style={{paddingRight: 60, paddingTop: 20}} name={'call-outline'} size={20} color={COLORS.colorwhite}/>

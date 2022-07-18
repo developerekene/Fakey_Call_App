@@ -7,6 +7,7 @@ import MainContainer from './navigation/MainContainer';
 import CallScreen from './navigation/screens/CallScreen';
 import AppContainer from './navigation/AppContainer';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import DetailsScreen from './navigation/screens/DetailsScreen';
 
 export default function App() {
   
@@ -22,6 +23,7 @@ export default function App() {
       {/* <PushNotification/> */}
       {/* <MainContainer/> */}
       {/* <CallScreen/> */}
+      {/* <DetailsScreen/> */}
     
     </SafeAreaProvider>
       

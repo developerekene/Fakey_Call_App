@@ -5,6 +5,7 @@ import MainContainer from './MainContainer';
 import ContactsScreen from './screens/ContactsScreen';
 import CallScreen from './screens/CallScreen';
 import CreateContactScreen from './screens/CreateContactScreen';
+import DetailsScreen from './screens/DetailsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ export default function AppContainer(){
         
         <Stack.Screen name="CallScreen" component={CallScreen} options={{}} />
         <Stack.Screen name="CreateContact" component={CreateContactScreen} options={{}} />
+        <Stack.Screen name="DetailsScreen" component={DetailsScreen} options={{}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

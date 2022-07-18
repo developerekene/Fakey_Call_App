@@ -13,20 +13,20 @@ export default function CallScreenIcons({navigation}){
                <ScrollView horizontal>
                     <TouchableOpacity
                          style={{paddingRight: 100, marginBottom: 60}}
-                         onPress={{}}
+                         // onPress={{}}
                          >
                          <Ionicons name={'mic-outline'} size={30} color={COLORS.lightGrey}/>
                          {/* <Text>Start Recording</Text> */}
                     </TouchableOpacity>
                     <TouchableOpacity
                          style={{paddingRight: 100}}
-                         onPress={{}}
+                         // onPress={{}}
                          >
                          <Ionicons name={'mic-off-outline'} size={30} color={COLORS.lightGrey}/>
                     </TouchableOpacity>
                     <TouchableOpacity
                          style={{}}
-                         onPress={{}}
+                         // onPress={{}}
                          >
                          <Ionicons name={'add-outline'} size={30} color={COLORS.lightGrey}/>
                     </TouchableOpacity>
@@ -34,20 +34,20 @@ export default function CallScreenIcons({navigation}){
                <ScrollView horizontal>
                     <TouchableOpacity
                          style={{paddingRight: 100, marginBottom: 60}}
-                         onPress={{}}
+                         // onPress={{}}
                          >
                          <Ionicons name={'videocam-outline'} size={30} color={COLORS.lightGrey}/>
                          {/* <Text>Start Recording</Text> */}
                     </TouchableOpacity>
                     <TouchableOpacity
                          style={{paddingRight: 100}}
-                         onPress={{}}
+                         // onPress={{}}
                          >
                          <Ionicons name={'people-outline'} size={30} color={COLORS.lightGrey}/>
                     </TouchableOpacity>
                     <TouchableOpacity
                          style={{}}
-                         onPress={{}}
+                         // onPress={{}}
                          >
                          <Ionicons name={'pause-outline'} size={30} color={COLORS.lightGrey}/>
                     </TouchableOpacity>
@@ -57,7 +57,7 @@ export default function CallScreenIcons({navigation}){
                     
                     <TouchableOpacity
                          style={{}}
-                         onPress={{}}
+                         onPress={() => navigation.navigate("Maincontainer")}
                          >
                          <Ionicons style={{
                               backgroundColor: COLORS.lightRed, 

@@ -8,7 +8,7 @@ export default function CallScreen({navigation}) {
      return(
           <SafeAreaView style={{backgroundColor: COLORS.colorwhite, flex: 1}}>
                <CallImageComp/>
-               <CallScreenIcons/>
+               <CallScreenIcons navigation={navigation}/>
           </SafeAreaView>
      );
 }
