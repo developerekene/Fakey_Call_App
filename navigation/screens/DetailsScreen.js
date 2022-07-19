@@ -2,8 +2,13 @@ import * as React from 'react'
 import { View, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { COLORS } from '../../constants/Colors';
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import { useRoute } from '@react-navigation/native'
 
-export default function DetailsScreen({navigation, route}){
+export default function DetailsScreen({navigation}){
+
+     const route = useRoute()
+     // console.log("************************")
+     // console.log(contact.firstName)
      return(
           <View>
                <View style={{
@@ -41,20 +46,21 @@ export default function DetailsScreen({navigation, route}){
                     marginTop: 20
                }}>
                     <Text style={{fontSize: 20, marginBottom: 15}}>
-                         First Name: {}
+                         {"Title:"} {route.params.JobTitle}
                     </Text>
                     <Text style={{fontSize: 20, marginBottom: 15}}>
-                         Last Name: {"last name"}
+                    {"Name:"} {route.params.Name}
                     </Text>
                     <Text style={{fontSize: 20, marginBottom: 15}}>
-                         Email: {"email"}
+                    {"Email:"} {route.params.Email}
                     </Text>
                     <Text style={{fontSize: 20, marginBottom: 15}}>
-                         Mobile Number: {"mobile number"}
+                    {"Phone Number:"} {route.params.PhoneNumber}
                     </Text>
                     <Text style={{fontSize: 20, marginBottom: 15}}>
-                         Phone Number: {"phone number"}
+                    {"Company:"} {route.params.Company}
                     </Text>
+                    
                </View>
 
                

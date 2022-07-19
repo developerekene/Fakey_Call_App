@@ -17,12 +17,13 @@ export default function MyContactList({ navigation }) {
          const { status } = await Contacts.requestPermissionsAsync();
          if (status === "granted") {
            const { data } = await Contacts.getContactsAsync({
-             fields: [Contacts.Fields.Emails, Contacts.Fields.FirstName, Contacts.Fields.LastName, Contacts.Fields.PhoneNumbers],
+             fields: [Contacts.Fields.Emails, Contacts.Fields.FirstName, Contacts.Fields.LastName, Contacts.Fields.PhoneNumbers, Contacts.Fields.JobTitle, Contacts.Fields.Company],
           //    fields: [Contacts.Fields.Emails],
            });
            console.log(status);
            console.log(data);
            console.log(Contacts)
+           console.log("THIS CALL", Contacts[0])
    
            if (data.length > 0) {
                const contact = data[0];
@@ -45,7 +46,13 @@ export default function MyContactList({ navigation }) {
                     return(
                       <View key={index}>
 
-                           <TouchableOpacity onPress={() => navigation.navigate("DetailsScreen")}>
+                         <TouchableOpacity onPress={() => navigation.navigate("DetailsScreen", {
+                              Name: contact.name,
+                              Email: contact.emails.map((emailContact, i)=> <Text key={i}>{emailContact.email}</Text>),
+                              PhoneNumber: contact.phoneNumbers.map((phoneContact, j)=> <Text key={j}>{phoneContact.label}: {phoneContact.number}</Text>),
+                              JobTitle: contact.jobTitle,
+                              Company: contact.company
+                         })}>
                               <Text 
                               style={{
                                    fontSize: 17, 
@@ -53,11 +60,11 @@ export default function MyContactList({ navigation }) {
                                    paddingBottom: 20, 
                                    paddingTop: 20, 
                                    color: COLORS.lightRed}}>
-                                        {contact.firstName}</Text>
+                                        {contact.firstName} </Text>
                            </TouchableOpacity>
                            
                            
-                      {/* {contact.emails.map((emailContact, i)=> <Text key={i} style={{color: COLORS.colorwhite, paddingTop: 10}}>Email: {emailContact.email}</Text>)} */}
+                      
                       {/* {contact.phoneNumbers.map((phoneContact, j)=> <Text key={j} style={{color: COLORS.colorwhite}}>{phoneContact.label}: {phoneContact.number}</Text>)} */}
                       
                     </View>
