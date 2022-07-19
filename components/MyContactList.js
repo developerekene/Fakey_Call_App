@@ -46,14 +46,14 @@ export default function MyContactList({ navigation }) {
                       <View key={index}>
 
                            <TouchableOpacity onPress={() => navigation.navigate("DetailsScreen")}>
-                           <Text 
-                           style={{
-                                fontSize: 17, 
-                                paddingStart: 20, 
-                                paddingBottom: 20, 
-                                paddingTop: 20, 
-                                color: COLORS.lightRed}}>
-                                     {contact.firstName}</Text>
+                              <Text 
+                              style={{
+                                   fontSize: 17, 
+                                   paddingStart: 20, 
+                                   paddingBottom: 20, 
+                                   paddingTop: 20, 
+                                   color: COLORS.lightRed}}>
+                                        {contact.firstName}</Text>
                            </TouchableOpacity>
                            
                            

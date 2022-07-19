@@ -6,7 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 import { COLORS } from '../constants/Colors';
 
 export default function AddContactButton({navigation}){
-     // console.log(navigation)
      return(
           <View style={{
                marginStart: 22,

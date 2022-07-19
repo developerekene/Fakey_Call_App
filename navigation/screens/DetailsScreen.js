@@ -3,7 +3,7 @@ import { View, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { COLORS } from '../../constants/Colors';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-export default function DetailsScreen({navigation}){
+export default function DetailsScreen({navigation, route}){
      return(
           <View>
                <View style={{
@@ -41,7 +41,7 @@ export default function DetailsScreen({navigation}){
                     marginTop: 20
                }}>
                     <Text style={{fontSize: 20, marginBottom: 15}}>
-                         First Name: {"first name"}
+                         First Name: {}
                     </Text>
                     <Text style={{fontSize: 20, marginBottom: 15}}>
                          Last Name: {"last name"}
