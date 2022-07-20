@@ -1,14 +1,13 @@
 import * as React from 'react'
 import { View, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { COLORS } from '../../constants/Colors';
-import Ionicons from 'react-native-vector-icons/Ionicons'
-import { useRoute } from '@react-navigation/native'
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { useRoute } from '@react-navigation/native';
+import PushNotification from '../../components/notifee/PushNotification';
 
 export default function DetailsScreen({navigation}){
 
      const route = useRoute()
-     // console.log("************************")
-     // console.log(contact.firstName)
      return(
           <View>
                <View style={{
@@ -20,11 +19,15 @@ export default function DetailsScreen({navigation}){
                          source={require('../../images/new-logo.png')}
                     />
                     <ScrollView horizontal>
+                         {/* <PushNotification /> */}
                          <TouchableOpacity
                               style={{paddingRight: 100}}
-                              onPress={() => navigation.navigate("CallScreen")}
+                              onPress={() => navigation.navigate("CallScreen", {
+                                   Name: route.params.Name,
+                                   PhoneNumber: route.params.PhoneNumber,
+                              })}
                               >
-                              <Ionicons name={'call-outline'} size={20} color={COLORS.lightRed}/>
+                                   <Ionicons name={'call-outline'} size={20} color={COLORS.lightRed}/>
                          </TouchableOpacity>
                          <TouchableOpacity
                               style={{paddingRight: 100}}

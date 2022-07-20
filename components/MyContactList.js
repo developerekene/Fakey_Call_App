@@ -49,7 +49,7 @@ export default function MyContactList({ navigation }) {
                          <TouchableOpacity onPress={() => navigation.navigate("DetailsScreen", {
                               Name: contact.name,
                               Email: contact.emails.map((emailContact, i)=> <Text key={i}>{emailContact.email}</Text>),
-                              PhoneNumber: contact.phoneNumbers.map((phoneContact, j)=> <Text key={j}>{phoneContact.label}: {phoneContact.number}</Text>),
+                              PhoneNumber: contact.phoneNumbers.map((phoneContact, j)=> <Text key={j}> {phoneContact.number}</Text>),
                               JobTitle: contact.jobTitle,
                               Company: contact.company
                          })}>

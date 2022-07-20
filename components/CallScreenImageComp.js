@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { View, Text, ScrollView, Image } from 'react-native';
 import { COLORS } from '../constants/Colors';
-
-
+import { useRoute } from '@react-navigation/native'
 
 export default function CallImageComp(){
+     const route = useRoute()
      return(
           <View style={{
                justifyContent: 'center', 
@@ -20,14 +20,14 @@ export default function CallImageComp(){
                paddingBottom: 10,
                fontWeight: 'bold'
           }}>
-               Ekene
+               {route.params.Name}
           </Text>
           <ScrollView horizontal>
                <Text>
-                    09087875746 |{" "}
+               {route.params.PhoneNumber}
                </Text>
                <Text>
-                    Nigeria
+                     {" "}| Nigeria
                </Text>
           </ScrollView>
           <Text style={{paddingTop: 10}}>

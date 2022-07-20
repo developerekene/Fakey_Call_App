@@ -3,6 +3,7 @@ import { SafeAreaView } from 'react-native';
 import CallScreenIcons from '../../components/CallScreenIcons';
 import CallImageComp from '../../components/CallScreenImageComp';
 import { COLORS } from '../../constants/Colors';
+import { useRoute } from '@react-navigation/native'
 
 export default function CallScreen({navigation}) {
      return(

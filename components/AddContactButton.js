@@ -1,8 +1,6 @@
 import * as React from 'react'
-import { ScrollView, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import FavouriteScreen from '../navigation/screens/FavouriteScreen';
-import { useNavigation } from '@react-navigation/native';
 import { COLORS } from '../constants/Colors';
 
 export default function AddContactButton({navigation}){
