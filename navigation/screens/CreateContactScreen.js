@@ -23,10 +23,13 @@ export default function CreateContactScreen(navigation){
      const handleChangePhoneNumber = (text) => {
           setContact({...contact, phoneNumber: text});
      }
+     const alertMessage = () => {
+          alert = "Contacts Added"
+     }
      const submitContact = () => {
           setContacts({...contacts, contact});
           clearFields()
-          console.log(contacts);
+          // console.log(contacts);
      }
      const clearFields = () => {
           setContact({firstName: "", lastName: "", email: "", mobileNumber: "", phoneNumber: ""});

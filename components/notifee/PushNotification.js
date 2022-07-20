@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Button, TouchableOpacity } from 'react-native';
-import notifee from '@notifee/react-native';
+import notifee, { AndroidStyle } from '@notifee/react-native';
 import { useRoute } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { COLORS } from '../../constants/Colors';
@@ -8,7 +8,7 @@ import { COLORS } from '../../constants/Colors';
 export default function PushNotification(navigation) {
   const route = useRoute()
 
-  const handleChangeLastName = () => {
+  const displayNotification = () => {
     // navigateTo()
     onDisplayNotification()
 
@@ -34,26 +34,23 @@ export default function PushNotification(navigation) {
          body: 'You are making a call',
          android: {
            channelId,
-          //  smallIcon: 'name-of-a-small-icon', // optional, defaults to 'ic_launcher'.
-          //  // pressAction is needed if you want the notification to open the app when pressed
-          //  pressAction: {
-          //    id: 'default',
-          //  },
+          //  largeIcon: 'https://3dwarehouse.sketchup.com/warehouse/v1.0/publiccontent/e75d073e-8000-4c00-bca1-26075590fd44',
+          //  style: {
+          //    type: AndroidStyle.BIGPICTURE,
+          //   //  picture: require('https://3dwarehouse.sketchup.com/warehouse/v1.0/publiccontent/e75d073e-8000-4c00-bca1-26075590fd44')
+          //  }
          },
        });
      }
    
      return (
        <View>
-         {/* <TouchableOpacity
-              style={{paddingRight: 100}}
-              onPress={() => navigation.navigate("CallScreen", {
-                  Name: route.params.Name,
-                  PhoneNumber: route.params.PhoneNumber,
-              })}
+         <TouchableOpacity
+              style={{position: 'absolute', top: 0}}
+              onPress={displayNotification()}
               >
               <Ionicons name={'call-outline'} size={20} color={COLORS.lightRed}/>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
        </View>
      );
    }

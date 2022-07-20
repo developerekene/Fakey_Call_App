@@ -3,7 +3,6 @@ import { View, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { COLORS } from '../../constants/Colors';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useRoute } from '@react-navigation/native';
-import PushNotification from '../../components/notifee/PushNotification';
 
 export default function DetailsScreen({navigation}){
 
@@ -18,8 +17,8 @@ export default function DetailsScreen({navigation}){
                     <Image style={{width: 100, height: 100, marginBottom: 20}}
                          source={require('../../images/new-logo.png')}
                     />
+                    
                     <ScrollView horizontal>
-                         {/* <PushNotification /> */}
                          <TouchableOpacity
                               style={{paddingRight: 100}}
                               onPress={() => navigation.navigate("CallScreen", {
